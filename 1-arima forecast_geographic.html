@@ -1,0 +1,166 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <title>Orange Report</title>
+
+    <style>
+    html, body, table {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        margin:0px;
+        padding:0;
+        border:0 none;
+    }
+
+    h1, h2 , h3, h4, h5 {
+       padding: 1px;
+       font-size:100%;
+    }
+
+    h1 {
+        color: white;
+        background-color: black;
+        padding: 4px;
+        margin-top: 12px;
+        margin-bottom: 6px;
+    }
+
+    h2 {
+        border-bottom: 1px solid black;
+        padding-left: 2px;
+    }
+
+    ul, table, p {
+        padding: 10px;
+    }
+
+    table {
+        margin-left: -6px;
+    }
+
+    span.timestamp {
+        position: absolute;
+        right: 40px;
+        color:#ddd;
+    }
+
+    div.selected, div.normal {
+        margin: 5px;
+    }
+
+    div.selected {
+        background: #ddd;
+    }
+    @media print{
+        div.selected {
+            background: inherit;
+        }
+        ::-webkit-input-placeholder {
+            color: transparent;
+        }
+    }
+
+    div.content {
+        margin-left: 15px;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 2px 6px 2px 6px;
+    }
+
+    th {
+        font-weight: bold;
+    }
+
+    @media screen {
+        td, th {
+            white-space: nowrap;
+        }
+    }
+
+    .caption {
+        text-align: center;
+        font-size: 90%;
+    }
+
+    img {
+        display: block;
+        margin: auto;
+        max-height: 20cm;
+    }
+
+    span.legend-square {
+        width: 1em;
+        height: 1em;
+        margin-right: 6px;
+        display: inline-block;
+    }
+
+    span.legend-item {
+        margin-right: 24px;
+    }
+
+    textarea {
+        border: 1px solid silver;
+        font-style: italic;
+        width: 100%;
+        height: 4em;
+    }
+
+    .textwrapper {
+        padding: 15px;
+    }
+
+    div.normal textarea:invalid {
+        display: none;
+    }
+
+    div.selected textarea {
+        display: block;
+    }
+
+    @media print{
+        section.section, img {
+            page-break-inside: avoid;
+        }
+    }
+    </style>
+    <script>
+    function scrollToId(id) {
+        var sel_el = document.getElementById(id);
+        if (sel_el != undefined) {
+            sel_el.scrollIntoView();
+            return true;
+        }
+        return false;
+    };
+
+    function setSelectedId(id) {
+        var sel_el = document.getElementsByClassName('selected')[0];
+        if (sel_el != undefined && sel_el.id != id) {
+           sel_el.className = 'normal';
+        }
+        sel_el = document.getElementById(id);
+        if (sel_el != undefined) {
+            sel_el.className = 'selected';
+            return true;
+        }
+        return false;
+    };
+    </script>
+
+</head><body>
+
+ 
+
+<div id="2057066902288" class="normal" onclick="pybridge._select_item(this.id)"><section class="section"><h1>Data Table <span class="timestamp">Sat Apr 22 23, 14:21:11</span></h1><div class="content">
+<ul><b>Data instances:</b> 30<br><b>Features:</b> 4<br><b>Meta attributes:</b> None<br></ul><table>
+<tbody><tr><th></th><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">labor force actual contribution(million)in specific regionالرقم بعد حساب النسبه (forecast)</th><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">labor force actual contribution(million)in specific regionالرقم بعد حساب النسبه (95%CI low)</th><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">labor force actual contribution(million)in specific regionالرقم بعد حساب النسبه (95%CI high)</th><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">Source ID</th></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">1</th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.816223</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.627284</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">1.00516</td><td style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">Forecast (Female_Arima_Forcast) (0)</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">2</th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.815691</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.602326</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">1.02905</td><td style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">Forecast (Female_Arima_Forcast) (0)</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">3</th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.815411</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.5958</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">1.03502</td><td style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">Forecast (Female_Arima_Forcast) (0)</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">4</th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.815265</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.593964</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">1.03657</td><td style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">Forecast (Female_Arima_Forcast) (0)</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">5</th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.815188</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.593425</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">1.03695</td><td style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">Forecast (Female_Arima_Forcast) (0)</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">6</th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.766721</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.502061</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">1.03138</td><td style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">Forecast (Female_Arima_Forcast) (1)</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">7</th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.778387</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.464546</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">1.09223</td><td style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">Forecast (Female_Arima_Forcast) (1)</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">8</th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.785822</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.45408</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">1.11756</td><td style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">Forecast (Female_Arima_Forcast) (1)</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">9</th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.79056</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.451817</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">1.1293</td><td style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">Forecast (Female_Arima_Forcast) (1)</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">10</th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.79358</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.452034</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">1.13513</td><td style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">Forecast (Female_Arima_Forcast) (1)</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">11</th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.728966</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.562071</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.89586</td><td style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">Forecast (Female_Arima_Forcast) (2)</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">12</th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.734144</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.518857</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.949432</td><td style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">Forecast (Female_Arima_Forcast) (2)</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">13</th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.738364</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.496229</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.9805</td><td style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">Forecast (Female_Arima_Forcast) (2)</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">14</th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.741803</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.483377</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">1.00023</td><td style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">Forecast (Female_Arima_Forcast) (2)</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">15</th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.744605</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.475907</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">1.0133</td><td style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">Forecast (Female_Arima_Forcast) (2)</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">16</th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.426952</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.229143</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.624761</td><td style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">Forecast (Female_Arima_Forcast) (3)</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">17</th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.441483</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.189072</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.693895</td><td style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">Forecast (Female_Arima_Forcast) (3)</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">18</th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.453002</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.171655</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.734348</td><td style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">Forecast (Female_Arima_Forcast) (3)</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">19</th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.462131</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.164038</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.760224</td><td style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">Forecast (Female_Arima_Forcast) (3)</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">20</th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.469367</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.161219</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.777516</td><td style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">Forecast (Female_Arima_Forcast) (3)</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">21</th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.662325</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.412871</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.911779</td><td style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">Forecast (Female_Arima_Forcast) (4)</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">22</th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.662883</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.413418</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.912348</td><td style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">Forecast (Female_Arima_Forcast) (4)</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">23</th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.662878</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.413413</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.912343</td><td style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">Forecast (Female_Arima_Forcast) (4)</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">24</th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.662878</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.413413</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.912343</td><td style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">Forecast (Female_Arima_Forcast) (4)</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">25</th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.662878</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.413413</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.912343</td><td style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">Forecast (Female_Arima_Forcast) (4)</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">26</th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.425237</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.190753</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.659721</td><td style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">Forecast (Female_Arima_Forcast) (5)</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">27</th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.45265</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.163845</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.741455</td><td style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">Forecast (Female_Arima_Forcast) (5)</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">28</th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.47236</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.159144</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.785576</td><td style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">Forecast (Female_Arima_Forcast) (5)</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">29</th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.486532</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.161414</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.81165</td><td style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">Forecast (Female_Arima_Forcast) (5)</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">30</th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.496722</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.165618</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.827826</td><td style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">Forecast (Female_Arima_Forcast) (5)</td></tr></tbody></table></div></section>
+
+<div class="textwrapper"><textarea placeholder="Write a comment..." oninput="this.innerHTML = this.value;pybridge._add_comment(this.parentNode.parentNode.id, this.value);">North  governorates حضر بحرى
+North  countrysideريف وجه بحرى
+South governoratesحضر وجه قبلى
+South countrysideريف وجه قبلى
+حضرمحافظات الحدود  border governorates
+borders countrysideريف محافظات الحدود
+</textarea></div></div></body></html>
